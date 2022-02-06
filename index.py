@@ -15,6 +15,18 @@ class RegistrationForm(FlaskForm):
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'lasjfldsjidjlfsajdjfa'
 
+def reformatText(text, chars_per_line, label_object):
+    textBuffer = ''
+    chars = 0
+    for l in text:
+        if chars < chars_per_line:
+            textBuffer = textBuffer + l
+        else:
+            label_object.write_text(textBuffer, char_height=1, char_width=1, line_width=40, justification='L')
+            chars = 0
+            textBuffer = ''
+
+
 @app.route('/', methods=['GET', 'POST'])
 def hello():
     form = RegistrationForm()
@@ -29,7 +41,8 @@ def hello():
         l = zpl.Label(25,40)
         height = 2
         l.origin(0,2)
-        l.write_text(ing, char_height=1, char_width=1, line_width=40, justification='C')
+        # l.write_text(ing, char_height=1, char_width=1, line_width=40, justification='L')
+        reformatText(text=ing, chars_per_line=10, label_object=l)
         l.endorigin()
         zpl_text = l.dumpZPL()
         # l.preview()
