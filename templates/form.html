@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+  <form method='POST' action=''>
+    {{ form.hidden_tag() }}
+    <fieldset>
+      <legend>Imprimir Ingredientes</legend>
+      <div>
+        {{form.code.label()}}
+        {{form.code()}}
+        {{form.submit()}}
+      </div>
+    </fieldset>
+    
+  </form>
+  
+</div>
+{% endblock content %}
