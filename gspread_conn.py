@@ -14,7 +14,8 @@ def searchIngredients(id):
     code = sheet.find(id, in_column=0)
     try:
         ingredients = sheet.cell(code.row,2).value
-        return ingredients
+        lote = sheet.cell(code.row,3).value
+        return ingredients, lote
     except Exception:
         return "El codigo no existe"
 
