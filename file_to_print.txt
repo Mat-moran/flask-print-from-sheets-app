@@ -10,13 +10,13 @@
     ^FO8,35
     ^A0N,15,15
     ^FB350,11,0,L,0
-    ^FDREF: 1085     CANT: 100ML      Lote: B45 - 1506 -05 -21^FS
+    ^FDREF: 1     CANT: <input id="volume" name="volume" type="text" value="50">      Lote: B256 - 11-02-21^FS
 
     ^FX Seccion ingredientes
     ^FO8,55
     ^A0N,12,12
     ^FB405,11,0,L,0
-    ^FDajdflaj, akldkfalf, ajflsdjkfjlfjlajlfklafjkjfa, akj,jajalsjdf,  345kjdlkfjalf, akdjfladjksjjfkjs, kasjfkskjfksjf, akjsdklfjal^FS
+    ^FDagua, aceite, vinagre^FS
 
     ^FX Seccion del nombre de empresa y telefono
     ^FO8,170
