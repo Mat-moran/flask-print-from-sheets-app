@@ -63,7 +63,7 @@ def hello():
     ^FO330,150^GFA,270,270,6,N06,M03F,M0ED8,L03988,L0E608,K018C1,K06306,J018E0C,J071838,J0C606,I031C1C,I0E703,0018C0C,0063038,00CC06,033018,06C07,0F01C,1C07,181C,087,07C,06,I01JFE,001F8I0FC,007L07,00CL018,00FCJ03F8,008LF88,008M08,:::0080E318808,00803419808,0080671F808,0080651E808,00801598808,0080E718808,008M08,:00CM08,007L03,003F8I0FE,I03JFE,^FS
     ^XZ
     """.format(
-                form.code.data, lote, ing, form.volume
+                form.code.data, lote, ing, form.volume.data
             )
             with open("file_to_print.txt", "w") as file:
                 # file.write(zpl_text)
